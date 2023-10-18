@@ -1,9 +1,8 @@
 {
   "name": "poetinfinix",
   "version": "1.0.0",
-  "description": "A poetry website",
+  "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +15,6 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "js": "^0.1.0",
-    "node": "^21.0.0",
-    "Parser": "^0.0.1"
+    "node": "^21.0.0"
   }
 }
