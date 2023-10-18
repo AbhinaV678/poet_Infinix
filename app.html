@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetify</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<style>
+  body::-webkit-scrollbar{
+    display: none;
+  }
+
+
+@media screen and (max-device-width: 640px) {
+  .big-text {
+  font-size: 80px;
+  font-weight:800;
+  color: #272829;
+  animation-delay: 1s;
+  }
+
+  .finder {
+  width: auto;
+  border: 1px solid #fff;
+  background-color: #f6f5f0;
+  border-radius: 15px;
+  padding: 8px;
+  box-shadow: 9px 9px 16px rgba(189, 189, 189, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+
+.finder__outer {
+  display: flex;
+  width: auto;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: inset 10px 10px 15px -10px #c3c3c3,
+    inset -10px -10px 15px -10px #ffffff;
+}
+
+.finder__inner {
+  width: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.finder__form {
+  flex: 1;
+  height: calc(100% + 3rem);
+}
+
+.finder__input {
+  height: calc(100% + 3rem);
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.75px;
+  width: 100%;
+}
+
+form{
+  padding: 20px;
+}
+
+.finder__icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  transition: all 0.2s;
+  box-shadow: inset 0 0 0 20px #292929;
+  border-radius: 50%;
+  position: relative;
+
+  &:after,
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &:after {
+    width: 10px;
+    height: 10px;
+    background-color: #292929;
+    border: 3px solid #f6f5f0;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    left: 0px;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+
+    @at-root .active & {
+      border-width: 10px;
+      background-color: #f6f5f0;
+    }
+  }
+
+  &:before {
+    width: 4px;
+    height: 13px;
+    background-color: #f6f5f0;
+    top: 50%;
+    left: 20px;
+    transform: rotateZ(45deg) translate(-50%, 0);
+    transform-origin: 0 0;
+    border-radius: 4px;
+
+    @at-root .active & {
+      background-color: #292929;
+      width: 6px;
+      transform: rotateZ(45deg) translate(-50%, 25px);
+    }
+  }
+
+  @at-root .processing & {
+    transform-origin: 50%;
+    animation: spinner 0.3s linear infinite;
+    animation-delay: 0.5s;
+  }
+
+  @at-root .active & {
+    transform: translateY(-5px);
+  }
+}
+
+.banner {
+  width: 40%;
+  background-size: cover;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 30px;
+}
+
+.container{
+  width: max-content;
+  margin: auto;
+}
+}
+
+    /* @media (min-width: 481px) and (max-width: 1200px) {
+      
+    }
+
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      
+    }
+
+    @media (min-width: 1601px) {
+      
+    } */
+</style>
+<body>
+
+  <div class="banner animated tada">
+    <div class=" big-text animated tada">Poetify</div>
+   </div>
+
+    <div class="container">
+        <form action="/get-poem" method="post" autocomplete="off">
+          <div class="finder">
+            <div class="finder__outer">
+              <div class="finder__inner">
+                <div class="finder__icon" ref="icon"></div>
+                <input class="finder__input" type="text" name="searchItem" placeholder="search poems using poet name or poem title"/>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+</body>
+</html>
