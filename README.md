@@ -1,7 +1,7 @@
 # POETIFY - Search Poems by Title or Poet Name
 
-POETIFY is a web application that allows users to search for poems using either the poem's title or the poet's name. This project makes use of HTML, EJS, CSS for the frontend, and Node.js and Express.js for handling server-side functionalities. POETIFY fetches poems from the PoetryDB API, which is an API for internet poets.
-POETIFY currently supports queries related to English poems only. 
+POETIFY is a web application that allows users to search for poems using either the poem's title or the poet's name. This project makes use of HTML, EJS, CSS for the frontend, and Node.js and Express.js for handling server-side functionalities.It is currently hosted on Render. POETIFY uses the PoetryDB API for fetching the poems, which is an API for internet poets.
+POETIFY currently supports queries related to English poems only.
 You can find more information about the PoetryDB API in the [official documentation](https://github.com/thundercomb/poetrydb#readme).
 
 ## Features
@@ -32,6 +32,7 @@ You can find more information about the PoetryDB API in the [official documentat
 ## Acknowledgments
 
 - POETIFY relies on the PoetryDB API to provide a vast collection of poems. Special thanks to the [PoetryDB project](https://github.com/thundercomb/poetrydb#readme) for making this resource available.
+- We also extend our appreciation to Render for hosting this project.
 
 Happy poem searching with POETIFY!
 
