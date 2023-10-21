@@ -32,7 +32,7 @@ You can find more information about the PoetryDB API in the [official documentat
 ## Acknowledgments
 
 - POETIFY relies on the PoetryDB API to provide a vast collection of poems. Special thanks to the [PoetryDB project](https://github.com/thundercomb/poetrydb#readme) for making this resource available.
-- We also extend our appreciation to Render for hosting this project.
+- I would also like to extend my appreciation to Render for hosting this project.
 
 Happy poem searching with POETIFY!
 
