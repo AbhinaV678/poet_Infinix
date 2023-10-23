@@ -22,14 +22,17 @@ app.get("/", (req, res) => {
   });
 
 app.post("/get-poem", async (req, res) => {
-  var searchBody = req.body["searchItem"];
+  var search = req.body["searchItem"];
+  var searchBody = search.trim();
   var result1,result2;
   var finalResultant;
   var result1valid = false;
   var result2valid = false;
   
-  if(searchBody.includes("$","%","@","#","+","(",")","[","]","{","}","~","^","-")){
-      searchBody = "84418424465484654442";
+  var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+  if(format.test(searchBody) || searchBody===""){
+      return res.render("displayPoem.ejs", { poem: "Invalid search query."});
   }
 
   try {
